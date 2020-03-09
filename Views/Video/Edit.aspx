@@ -4,9 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Create</title>
-
- <meta charset="UTF-8">
+    <title>Edit</title><meta charset="UTF-8">
     <meta name="description" content="ASP.NET MVC 2 CRUD Video">
     <meta name="Keywords" content="ASP.NET, MVC, FACPYA">
     <meta name="Author" content="Fernando Enrique Mascorro Garcia">
@@ -16,7 +14,7 @@
 </head>
 <body>
 <a href="/Home/Index">Inicio</a>
-<form action="/video/Create" method="post">
+<form action="/video/Edit" method="post">
 <fieldset>
 
 <legend>Datos del video</legend>
