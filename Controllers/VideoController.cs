@@ -45,11 +45,11 @@ namespace MVCLaboratorio.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Delete(int idvideo)
+        public ActionResult Delete(int idVideo)
         {
             //Borrar en la base de datos 
             List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@idVideo", idvideo));
+            parametros.Add(new SqlParameter("@idVideo", idVideo));
            
             BaseHelper.ejecutarSentencia("sp_video_delete",
             CommandType.StoredProcedure,
@@ -74,6 +74,11 @@ namespace MVCLaboratorio.Controllers
             CommandType.StoredProcedure,
             parametros);
             RedirectToAction("Index", "Video");
+            return View();
+        }
+         public ActionResult Query()
+        {
+            ViewData["DataVideo"] = BaseHelper.ejecutarConsulta("SELECT * FROM video", CommandType.Text);
             return View();
         }
 
